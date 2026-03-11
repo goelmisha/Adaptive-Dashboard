@@ -1,73 +1,84 @@
-# React + TypeScript + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🚀 Adaptive Dashboard: Glassmorphism Edition
 
-Currently, two official plugins are available:
+A high-performance, responsive financial dashboard built with **React**, **Vite**, and **Tailwind CSS v4**. This project showcases advanced UI/UX patterns including Glassmorphism, real-time data visualization, and seamless layout transitions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Core Features
 
-## React Compiler
+### 🧊 Glassmorphism Aesthetic
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The primary visual theme is built on a **Glassmorphism** effect, achieved through:
 
-## Expanding the ESLint configuration
+* 
+**Low-opacity backgrounds**: `bg-white/5`.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* 
+**Backdrop blurring**: `backdrop-blur-xl` for a frosted glass effect.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* 
+**Subtle borders**: `border border-white/20` to define modular cards.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* 
+**High-contrast text**: Pure white (#FFFFFF) text to ensure readability over translucent layers.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+
+### ⚙️ Compact Mode & Layout Refactoring
+
+The dashboard features a **Compact Mode Toggle** that refactors the layout without a page reload:
+
+* 
+**Sidebar**: Collapses from a full navigation width to an icons-only view.
+
+
+* 
+**Main Content**: Transitions from a two-column widget grid to a single-column stack.
+
+
+* 
+**Smooth Transitions**: Powered by **Framer Motion's** `LayoutGroup` and `layout` props to animate resizing and repositioning.
+
+
+
+### 📊 Advanced Components
+
+* 
+**System Health Meter**: A custom **SVG-based** gauge in the sidebar.
+
+
+* Uses `stroke-dasharray` and `stroke-dashoffset` for fill animations.
+
+
+* Features a dynamic color key: **Green** (80-100), **Yellow** (50-79), and **Red** (0-49).
+
+
+
+
+* 
+**Real-Time Ticker Stream**: Modular cards displaying bold, high-contrast price data with green/red status indicators.
+
+
+* 
+**Asset Distribution**: A responsive SVG pie chart that adapts its scaling based on the layout mode.
+
+
+
+## 🛠️ Tech Stack
+
+* **Vite**: Ultra-fast build tool and dev server.
+* **Tailwind CSS v4**: Zero-config styling and modern CSS features.
+* **Framer Motion**: Advanced physics-based animations and layout transitions.
+* **Lucide React**: Clean, accessible iconography.
+
+## 🚦 Getting Started
+
+1. Clone the repo.
+2. Run `npm install`.
+3. Start the dev server with `npm run dev`.
+
+---
+
