@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  /* PDF Requirement: Dark gradient and Glassmorphism colors [cite: 4, 11] */
+  --color-dash-bg: #0f172a; 
+  --color-glass-white: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  /* [cite: 4] Primary background maximizes Glassmorphism effect */
+  background: linear-gradient(to bottom right, #111827, #000000);
+  @apply min-h-screen text-white antialiased;
+}
+
+/* [cite: 11] Reusable Glassmorphism utility */
+.glass-card {
+  @apply bg-white/5 backdrop-blur-xl border border-white/20 rounded-xl shadow-lg;
+}
